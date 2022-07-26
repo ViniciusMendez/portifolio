@@ -1,0 +1,21 @@
+@charset "UTF-8";
+body{
+    margin: 0;
+    font-family: Tahoma, Geneva, Verdana, sans-serif;
+}
+
+div{
+    
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.topo{
+    background-color: #afddfb;
+    text-align: center;
+}
+.menu{
+    margin: auto;
+}
+
+
