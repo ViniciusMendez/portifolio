@@ -5,17 +5,15 @@ body{
 }
 
 div{
-    
+    text-align: center;
     padding-top: 30px;
     padding-bottom: 30px;
 }
 
 .topo{
     background-color: #afddfb;
-    text-align: center;
+    
 }
-.menu{
-    margin: auto;
-}
+
 
 
