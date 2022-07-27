@@ -15,5 +15,122 @@ div{
     
 }
 
+.paragrafo{
+    font-size: 18px;
+    text-align: justify;
+    line-height: 28px;
+    margin: 10px auto;
+    max-width:980px ;
+    padding: 10px;
+}
+
+.topo img{
+    width: 150px;
+}
+
+.ptopo{
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 25px;
+}
+
+.menu{
+    color: #1d1d1d;
+    font-size: 18px;
+    text-decoration: none;
+    margin: 0 10px;
+    border-bottom: 2px solid #1d1d1d;
+}
+
+/* seçao 2*/
+.banner{
+    padding-top: 0;
+    margin-top: 50px;
+}
+
+span{
+    font-weight: bold;
+}
+/*secçao 3*/
+h1{
+    color:#1d1d1d;
+    margin-bottom: 5px;
+    
+}
+h2{
+    font-weight: normal;
+    color: #1c81c0;
+    margin-top:0 ;
+}
+
+h3{
+    color: white;
+    font-size: 28px;
+    list-style: 42px;
+}
+
+img{
+    width: 450px;
+}
+.azul{
+    color: #1d80c1;
+}
+
+/* secçao 4*/
+
+.contato , .serviços{
+    background-color: #1c81c0;
+}
+
+.pserciços{
+    color: white;
+    line-height: 42px;
+    max-width: 700px;
+    font-size: 22px;
+    text-align: center;
+}
+.amarelo{
+    color: #fff81b;
+}
+
+.listser{
+       width:135px ;
+       margin: 40px auto 40px;
+}
+
+.iten-listser{
+    font-size: 22px;
+    line-height:42px ;
+    text-align: left ;
+    color: #ffff;
+}
+/* 6 seção*/
+
+.pcontato{
+    color: white;
+    background-color: #1d1d1d;
+    padding: 15px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.lista-cont{
+    width: 210px;
+    list-style: none;
+    margin: 40px auto 40px;
+}
+
+.item-listcont{
+    margin-top: 15px;
+    text-align: center;
+    font-size: 18px;
+}
+
+.link-contato{
+    background-color: white;
+    color: #1d80c1;
+    padding: 2px 5px;
+    border-radius: 5px;
+}
 
 
