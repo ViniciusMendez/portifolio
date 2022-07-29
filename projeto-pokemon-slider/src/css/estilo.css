@@ -1,3 +1,67 @@
+/* fonte e imagem de fundo cobrindo a tela toda*/
 body{
-    font-family: 'Outfit';
+    font-family: 'Outfit' sans-serif;
+    background-image: url(../imagens/fundo-site.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
 }
+/* estilizando o topo header*/
+.topo{
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:15px ;
+    padding-top: 50px;
+}
+
+.topo .titulo{
+    color: #f1ecff;
+}
+
+.topo .pokebola{
+    width: 25px;
+    height: 25px;
+}
+
+/* estilizando o corpo botndo  setas um do lado o outro */
+
+.pokedex{
+    background-color: aquamarine;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+    margin: 60px 0;
+}
+
+/* estilizando a lista */
+.lista-pokemon{
+    background-color: rgb(248, 19, 191);
+    width: 310px;
+    height: 520px;
+
+}
+
+/* estilizando a seta*/
+.btn-seta{
+    background-color: #f1ecff;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 0;
+    cursor: pointer;
+    transition: backgroud-color 0.2s ease-in-out;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.btn-seta.btn-voltar{
+    transform: rotateY(180deg);
+}
+
+.btn-seta:hover{
+    background-color: #8351fe;
+}
+
+
