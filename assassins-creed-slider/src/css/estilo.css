@@ -5,6 +5,184 @@ body{
     background-image: url(../imagens/fundo.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    background-attachment: fixed;
+    /* background-attachment: fixed; */
     min-height:100vh ;
+}
+
+/* estilizando header*/
+
+.topo{
+    background-color: rgba(0, 0, 0, 0.014);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    padding-top: 50px;
+}
+
+.topo .titulo{
+    color: #020202;
+}
+.topo .ac{
+    width: 55px;
+    height: 65px;
+}
+
+/* estilizando o corpo e botoes*/
+
+.conteudo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+    margin: 60px 0;
+}
+
+/* estilizando a lista*/
+
+.lista-ac{
+    width: 315px;
+    height: 620px;
+    position: relative;
+}
+
+/* estilizando a seta*/
+
+.btn-seta{
+    background-color: #f5f5f5;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 0;
+    cursor: pointer;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.btn-seta:hover{
+    background-color: aqua;
+}
+.btn-seta-voltar{
+    transform: rotateY(180deg);
+}
+
+
+/* estilizando cartão*/
+
+.cartao{
+    opacity: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: absolute;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.541) 0px 5px 15px;
+}
+.cartao.selecionado{
+    opacity: 1;
+    z-index: 1;
+}
+
+.fundo-1{
+    background-image: url(../imagens/card-01.png);
+    background-repeat: no-repeat ;
+}
+.fundo-2{
+    background-image: url(../imagens/card-02.png);
+    background-repeat: no-repeat ;
+}
+.fundo-3{
+    background-image: url(../imagens/card-03.png);
+    background-repeat: no-repeat ;
+}
+.fundo-4{
+    background-image: url(../imagens/card-04.png);
+    background-repeat: no-repeat ;
+}
+.fundo-5{
+    background-image: url(../imagens/card-05.png);
+    background-repeat: no-repeat ;
+}
+.fundo-6{
+    background-image: url(../imagens/card-06.png);
+    background-repeat: no-repeat ;
+}
+.fundo-7{
+    background-image: url(../imagens/card-07.png);
+    background-repeat: no-repeat ;
+}
+.fundo-8{
+    background-image: url(../imagens/card-08.png);
+    background-repeat: no-repeat ;
+}
+.fundo-9{
+    background-image: url(../imagens/card-09.png);
+    background-repeat: no-repeat ;
+}
+.fundo-10{
+    background-image: url(../imagens/card-10.png);
+    background-repeat: no-repeat ;
+}
+
+
+/* estizando info do card*/
+
+.cartao .info{
+    background-color: rgba(153, 19, 10, 0.705);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 10px;
+    border-bottom-right-radius: 60px;
+    border-top-left-radius: 60px;
+    margin: 15px 15px 0;
+    
+}
+
+.cartao .info .nome{
+    font-size: 22px;
+    color: #f5f5f5;
+    font-weight: normal;
+    padding-left: 10px;
+}
+
+.cartao .info .num{
+    /* background-color: rgba(131, 131, 131, 0.986); */
+    color: #f5f5f5;
+    padding: 10px 15px;
+    border-radius: 19px;
+}
+
+/* imagem*/
+
+.cartao .cont-imagem{
+    text-align: center;
+}
+
+.cartao .imagem-ac{
+    max-width: 100%;
+    max-height: 400px;
+    padding: 20px;
+}
+
+/* descrição*/
+
+.cartao .descricao{
+    background-color: rgba(153, 19, 10, 0.705);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    margin: 0 15px 15px ;
+}
+
+.cartao .descricao .titulo{
+    color: #f5f5f5;
+    font-size: 15px;
+    padding: 12px;
+}
+
+.cartao .descricao .texto{
+    font-size: 14px;
+    padding: 12px;
+    text-align: justify;
+    max-height: 100px;
+    overflow-y: auto;
 }
