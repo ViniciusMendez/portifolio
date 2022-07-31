@@ -76,6 +76,7 @@ body{
     position: absolute;
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.541) 0px 5px 15px;
+    transition: opacity 0.5s ease-in-out;
 }
 .cartao.selecionado{
     opacity: 1;
@@ -176,10 +177,12 @@ body{
 .cartao .descricao .titulo{
     color: #f5f5f5;
     font-size: 15px;
-    padding: 12px;
+    padding: 10px 10px 7px 10px ;
+    
 }
 
 .cartao .descricao .texto{
+    color: #f5f5f5;
     font-size: 14px;
     padding: 12px;
     text-align: justify;
