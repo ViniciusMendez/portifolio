@@ -1,0 +1,10 @@
+@charset "UTF-8";
+/* fonte e imagem de funco*/
+body{
+    font-family:Georgia, 'Times New Roman', Times, serif ;
+    background-image: url(../imagens/fundo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height:100vh ;
+}
