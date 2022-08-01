@@ -1,0 +1,34 @@
+@media(max-width:620px){
+    
+    .conteudo{
+        padding: 0 15px;
+        gap: 10px;
+    }
+
+    .btn-seta{
+        width: 20px;
+        height: 20px;
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+    } 
+
+    .lista-ac{
+        height: 480px;
+    }
+
+    .cartao .imagem-ac{
+        max-height: 230px;
+    }
+
+    .cartao .info .nome{
+        max-width: 50%;
+        font-size: 15px;
+    }
+
+    .cartao .info .num{
+        font-size: 13px;
+    }
+}
