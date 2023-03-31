@@ -1,0 +1,46 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif ;
+}
+
+.limite-secao{
+  width: 100%;
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+.bt-icone{
+  width: 25px;
+  height: 25px;
+  margin-left: 10px;
+}
+
+
+.banner{
+  height: 341px;
+  display: flex;
+  background-image: url('/public/assets/banner-barbearia.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.ntexto{
+  height: auto;
+  display: flex;
+  align-items: center;
+}
+
+.ntexto div{
+  padding: 100px 20px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.ntexto h1 {
+  font-size: 40px;
+  margin-bottom: 30px;
+}
