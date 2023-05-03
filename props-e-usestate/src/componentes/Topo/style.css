@@ -1,0 +1,23 @@
+header {
+    width: 100%;
+    padding: 20px 0px;
+    background-color: white;
+    border-bottom: 1px solid gray;
+    color: black;
+    background-color: rgb(150, 213, 250);
+  }
+  
+  header h1 {
+    margin-bottom: 21px;
+  }
+  
+  button {
+    border: 2px solid black;
+    border-radius: 20px;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 10px 15px;
+    margin-top: 30px;
+    cursor: pointer;
+  }
+  
