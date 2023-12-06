@@ -4,5 +4,5 @@
 
 <a href="https://viniciusmendez.github.io/portifolio/assassins-creed-slider/"> Assassins Creed-Cards</a>
 
-<a href="https://viniciusmendez.github.io/portifolio/assassins-creed-slider/"> Pokedex</a>
+<a href="https://viniciusmendez.github.io/portifolio/pokedex/"> Pokedex</a>
 
