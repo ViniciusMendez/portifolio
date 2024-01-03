@@ -4,10 +4,6 @@
     padding: 0;
     box-sizing: border-box;
 }
-h1{
-    text-align: center;
-    padding: 10px;
-}
 
 /* configurando o corpo do site  */
 
@@ -30,7 +26,7 @@ body{
     flex-direction: column;
     align-items: center;
     gap: 2rem;
-    background-color: #4a4a4a71;
+    background-color: #3b3b3bef;
     max-width: 700px;
     margin: auto;
     box-shadow: -2px 6px 5px 1px rgba(102,85,0,0.95);
@@ -45,7 +41,6 @@ body{
 }
 #add-item-task,
 #btn-task{
-    border: none;
     font-size: 1rem;
     outline: none;
     padding: 1rem;
@@ -92,4 +87,75 @@ li{
     text-transform: capitalize;
     display: flex;
     justify-content: space-between;
+    padding: 15px;
+    
 }
+button{
+    font-size: 15px;
+    margin-left: 50px;
+    margin-right: 50px;
+    box-shadow: 1px 2px 0px 0px #fff6af;
+	background-color:#ffec64;
+	border-radius:10px;
+	display:inline-block;
+	cursor:pointer;
+	color:#333333;
+	font-weight:bold;
+	padding:4px 30px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #ffee66;
+}
+
+/* extilizando o titilo */
+
+.titulo{
+    text-align: center;
+    transform: translate(0%, 10%) skewY(deg);
+    border: 2px solid #ffffff;
+    padding: 20px 50px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #df2201, 0 0 10px #ecfd00, 
+      inset 0 0 10px #ddff1e, inset 0 0 10px #e9ff1e;
+    animation: animate 1s linear infinite;
+    color: wheat;
+}
+h1 {
+    font-size: 3em;
+    color: #ffffff;
+    text-shadow: 0 0 10px #ffec64, 0 0 20px #ff6464bb, 0 0 80px #ffec64, 0 0 120px #e20000c0;
+   }
+
+   h1 span {
+    animation: animate 0.5s linear infinite;
+   }
+   
+   h1 span:nth-child(1) {
+    animation-delay: 1.55s;
+   }
+   
+   h1 span:nth-child(2) {
+    animation-delay: 4.55s;
+   }
+   
+   h1 span:nth-child(3) {
+    animation-delay: 2.35s;
+   }
+   
+   
+   @keyframes animate {
+    0% {
+    opacity: 1;
+    }
+    30% {
+    opacity: 1;
+    }
+    40% {
+    opacity: 0.5;
+    }
+    50% {
+    opacity: 1;
+    }
+    100% {
+    opacity: 1;
+    }
+   }
