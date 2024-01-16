@@ -62,7 +62,7 @@ body{
 .piano__keys{
     width: 100%;
     height: 400px;
-    background-color: #333;
+    background-color: #292929;
     border-radius: 15px;
     padding: 30px 40px;
     display: flex;
@@ -70,5 +70,48 @@ body{
 /* estilizando as teclas brancas */
 
 .white{
-
+    background-color: white;
+    width: 60px;
+    flex-grow: 1;
+    border-radius: 5px;
+    border-bottom:  10px solid#ddd;
+    color: #a0a0a0ad;
+    font-weight: bold;
+    margin-left: -17px;
+    z-index: 1;
+}
+.key span{
+    position: absolute;
+}
+.key{
+    display: flex;
+    position: relative;
+    align-items: flex-end;
+    justify-content: center;
+    padding-bottom: 8px;
+    user-select: none;
+}
+/* estilizando teclas pretas */
+.black{
+    width: 40px;
+    background:linear-gradient(black, #333);
+    height: 150px;
+    border-radius: 0 0 5px 5px;
+    border-bottom:  10px solid #222;
+    margin-left: -20px;
+    z-index: 2;
+    color: #ffffff65;
+}
+/* aplicando espaçamento em teclas que focaram juntas */
+.piano__keys .white:nth-child(1){
+    margin-left: 0;
+}
+.piano__keys .white:nth-child(5){
+    margin-right: 20px;
+}
+.piano__keys .white:nth-child(12){
+    margin-right: 20px;
+}
+.piano__keys .white:nth-child(17){
+    margin-right: 20px;
 }
