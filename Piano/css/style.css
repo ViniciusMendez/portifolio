@@ -1,0 +1,74 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+body{
+    background-color: #ebebebeb;
+}
+
+.piano{
+    background-color: #121212;
+    width: 1000px;
+    height: 400px;
+    margin: 100px auto 0;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* estilizando o topo do piano */
+.controls{
+    color: rgba(255, 255, 255, 0.774);
+    font-weight: bold;
+    padding: 30px;
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+/* extilizando o botao de ativar a recla das notas  */
+.switcher{
+    width: 50px;
+    height: 25px;
+    background-color: #4e4e4e;
+    display: flex;
+    border-radius: 50px;
+    padding: 5px;
+}
+.switcher__button{
+    height: 100%;
+    aspect-ratio: 1/1;
+    background-color: #ddd;
+    border-radius: 50%;
+}
+/* classe para ser adicionada via JS */
+.switcher--active{
+    background-color:  #006eff;
+    justify-content:  flex-end;
+}
+.checkbox__label{
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+/* ESTILIZANDO AS TECLAS */
+
+/* estilizando o container das teclas */
+
+.piano__keys{
+    width: 100%;
+    height: 400px;
+    background-color: #333;
+    border-radius: 15px;
+    padding: 30px 40px;
+    display: flex;
+}
+/* estilizando as teclas brancas */
+
+.white{
+
+}
