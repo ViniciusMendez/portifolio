@@ -1,0 +1,206 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:  Helvetica, sans-serif;
+}
+body{
+    background-color: #1f1f1f;
+}
+.header-global{
+    background-color: rgb(44, 44, 44);
+    padding: 5px;
+    width: 100%;
+    
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+}
+
+.portifolio{
+    color: #f1f1f1;
+    font-size: 35px;
+    font-weight: bold;
+}
+.segunda-cor{
+    color:rgb(0, 255, 157);
+}
+ul{
+    display: flex;
+    gap: 30px;
+    list-style: none;
+    align-items: center;
+    cursor: pointer;
+}
+a{
+    text-decoration: none;
+    font-size: 20px;
+    color: #f1f1f1;
+    font-weight: bold;
+}
+a:hover{
+
+    font-size: 15px;
+    transition: 0.8s;
+    background-color:rgb(0, 255, 157);
+    color: #1f1f1f;
+    padding: 10px;
+    border-radius: 25px ;
+}
+/* caixa principal */
+.caixa-principal{
+    background-image: url(../img/Programacao.png);
+    background-color:#1f1f1f ;
+    background-repeat: no-repeat;
+    background-size: 600px;
+    background-position: right;
+    width: 100%;
+    height: 100vh;
+}
+.meu_nome{
+    position: absolute;
+    top: 50%;
+    left: 7%;
+    color: white;
+}
+h1 span{
+    color: rgb(0, 255, 157);
+}
+h1{
+    font-size: 75px;
+}
+.meu_nome h3{
+    color: white;
+    font-size: 25px;
+    margin-left: 2%;
+    margin-top: 15px;
+}
+section{
+    background-color: black;
+    display: flex;
+    align-items: center;
+    padding: 30px 15%;
+    color: white;
+
+}
+section img{
+    height: 400px;
+    width: 600px;
+    border-radius: 100%;
+    border: 2px solid rgb(0, 255, 157);
+    margin-right: 60px;
+}
+
+section div h2{
+    font-size: 75px;
+}
+section div p{
+    color:rgb(185, 253, 227);
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+button{
+    background-color:  rgb(0, 255, 157);
+    height: 45px;
+    width: 170px;
+    font-size: 15px;
+    border: none;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+}
+button:hover{
+    background-color: black;
+    border: 2px solid  rgb(0, 255, 157);
+    transition: 0.5;
+    color: white;
+}
+
+/* pojetos */
+.principais_projetos{
+    background-color: #1f1f1f;
+}
+
+.principais_projetos h2{
+    color: white;
+    font-size: 60px;
+    text-align: center;
+    padding: 15px;
+}
+
+.card{
+    background-color: black;
+    height: 365px;
+    width: 335px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 6px 4px rgba(0, 255, 157, 0.384);
+    padding: 20px 35px;
+    text-align: center;
+    margin-top: 20px;
+}
+.card img{
+    height: 100px;
+}
+.card h5{
+    color: white;
+    font-size: 20px;
+
+}
+.card p{
+    color:rgb(185, 253, 227);
+    font-size: 15px;
+    margin-bottom: 50px;
+    margin-top: 25px;
+}
+.card-projeto{
+    display: flex;
+    justify-content: space-around;
+    padding: 25px;
+}
+/* footer */
+
+footer{
+    background-color: black;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+footer h5{
+    font-size: 20px;
+    color: white;
+    text-align: center;
+}
+footer p{
+    color: white;
+    font-size: 15px;
+    margin-bottom: 30px;
+    margin-top: 14px;
+}
+.social{
+    display: flex;
+    gap: 2rem;
+}
+.social img{
+    height: 24px;
+    border-radius: 50%;
+
+}
+.social a{
+    background-color: aqua;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 50px;
+}
+.social a:hover{
+    transform: scale(1.3);
+    transition: 0.5;
+}
