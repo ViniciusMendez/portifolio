@@ -10,4 +10,4 @@
 
 <a href="https://viniciusmendez.github.io/portifolio/To-Do-List/">To-Do-List</a>
 
-<a href="https://viniciusmendez.github.io/portifolio/Piano">Paino</a>
+<a href="https://viniciusmendez.github.io/portifolio/2048">2048 Game</a>
