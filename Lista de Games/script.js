@@ -17,8 +17,15 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     function searchGame(title) {
-        fetch(`https://api.rawg.io/api/games?search=${encodeURIComponent(title)}`)
-            .then(response => response.json())
+        const apiKey = '4fd23a0330454ee881f8dcc6024b5809'; // Substitua 'SUA_API_KEY' pela sua chave de API RAWG
+
+        fetch(`https://api.rawg.io/api/games?search=${encodeURIComponent(title)}&key=${apiKey}`)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Erro ao buscar jogo');
+                }
+                return response.json();
+            })
             .then(data => {
                 if (data.results && data.results.length > 0) {
                     const game = data.results[0];
