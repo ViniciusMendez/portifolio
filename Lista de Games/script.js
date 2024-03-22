@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     function searchGame(title) {
-        const apiKey = '4fd23a0330454ee881f8dcc6024b5809'; // Substitua 'SUA_API_KEY' pela sua chave de API RAWG
+        const apiKey = '6dacd5d0c9984b7ab8f3d329010633a9'; // Substitua 'SUA_API_KEY' pela sua chave de API RAWG
 
         fetch(`https://api.rawg.io/api/games?search=${encodeURIComponent(title)}&key=${apiKey}`)
             .then(response => {
