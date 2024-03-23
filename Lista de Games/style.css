@@ -1,0 +1,114 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.title {
+    background-color: black;
+    text-align: center; /* Centraliza o texto */
+    padding: 25px;
+    color: #ffcf00;
+    height: 100px;
+    margin-bottom: 100px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.form {
+    margin-top: 20px;
+}
+
+.input {
+    border: none;
+    padding: 10px;
+    margin-right: 10px;
+    background-color: #333;
+    color: white;
+    width: 200px;
+}
+
+.input::placeholder {
+    color: white;
+}
+
+.button {
+    border: none;
+    padding: 10px 20px;
+    background-color: #ffcf00;
+    color: black;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.button:hover {
+    background-color: #ffd63d;
+    transform: translateY(2px);
+}
+
+.list {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    background-color: #333;
+    padding: 25px;
+    border-radius: 4px;
+    box-shadow: -2px 12px 4px -7px rgba(0,0,0,0.44);
+    -webkit-box-shadow: -2px 12px 4px -7px rgba(0,0,0,0.44);
+    -moz-box-shadow: -2px 12px 4px -7px rgba(0,0,0,0.44);
+    overflow-y: auto; /* Adiciona rolagem vertical quando necessário */
+    max-height: 100vh;
+   
+}
+
+.gameItem {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    justify-content: space-between;
+    
+}
+ img {
+    max-width: 150px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.gameItem span {
+    color: yellow;
+    flex: 1; /* Adiciona flex: 1 para que o texto ocupe o espaço restante */
+}
+
+.deleteButton {
+    margin-left: 10px;
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-right: 15px;
+    margin-left: 15px;
+}
+
+.deleteButton:hover {
+    background-color: darkred;
+}
+
+.completeCheckbox {
+    margin-left: 10px;
+}
+.gameContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+}

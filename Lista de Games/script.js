@@ -3,6 +3,12 @@ document.addEventListener('DOMContentLoaded', function() {
     const input = document.getElementById('gameInput');
     const list = document.getElementById('gameList');
 
+    // Recupera os itens salvos no armazenamento local ao carregar a página
+    let savedGames = JSON.parse(localStorage.getItem('savedGames')) || [];
+
+    // Adiciona os itens salvos à lista ao carregar a página
+    savedGames.forEach(game => addGameToList(game.title, game.imageUrl));
+
     form.addEventListener('submit', function(event) {
         event.preventDefault();
         const gameTitle = input.value.trim();
@@ -30,6 +36,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 if (data.results && data.results.length > 0) {
                     const game = data.results[0];
                     addGameToList(game.name, game.background_image);
+                    // Salva o jogo adicionado no armazenamento local
+                    savedGames.push({ title: game.name, imageUrl: game.background_image });
+                    localStorage.setItem('savedGames', JSON.stringify(savedGames));
                 } else {
                     alert("Jogo não encontrado!");
                 }
@@ -43,19 +52,29 @@ document.addEventListener('DOMContentLoaded', function() {
         const listItem = document.createElement('div');
         listItem.classList.add('gameItem');
 
+        const gameContainer = document.createElement('div'); // Adiciona o contêiner do jogo
+        gameContainer.classList.add('gameContainer'); // Adiciona a classe "gameContainer"
+        
         const gameTitle = document.createElement('span');
         gameTitle.textContent = title;
-        listItem.appendChild(gameTitle);
 
         const gameImage = document.createElement('img');
         gameImage.src = imageUrl;
         gameImage.alt = title;
-        listItem.appendChild(gameImage);
+
+        gameContainer.appendChild(gameImage); // Adiciona a imagem ao contêiner do jogo
+        gameContainer.appendChild(gameTitle); // Adiciona o nome do jogo ao contêiner do jogo
+
+        listItem.appendChild(gameContainer); // Adiciona o contêiner do jogo ao item da lista
 
         const deleteButton = document.createElement('button');
         deleteButton.textContent = 'Excluir';
+        deleteButton.classList.add('deleteButton'); // Adiciona a classe "deleteButton"
         deleteButton.addEventListener('click', function() {
             listItem.remove();
+            // Remove o jogo da lista e atualiza o armazenamento local
+            savedGames = savedGames.filter(game => game.title !== title);
+            localStorage.setItem('savedGames', JSON.stringify(savedGames));
         });
         listItem.appendChild(deleteButton);
 
