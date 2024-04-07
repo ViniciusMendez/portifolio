@@ -1,23 +1,52 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lista de games</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bruno+Ace&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+    <title>Lista de Games</title>
 </head>
 <body>
-    <h1 class="title">Lista de Games</h1>
-    <div class="container">
-        <form id="addGameForm" class="form">
-            <input type="text" id="gameInput" class="input" placeholder="Digite aqui">
-            <button type="submit" class="button">Adicionar</button>
-        </form>
-        <div id="gameList" class="list">
-            <!-- Aqui serão exibidos os jogos -->
-        </div>
-    </div>
-</body>
+    <h2 class="title-name">GAME<span>PLANNER</span></h2>
+    <h1 class="title">Organize sua <br>
+        <span>coleção de jogos</spam></h1>
+    
+    <p class="texto-ex">Acompanhe seus jogos pendentes, elimine obstáculos e suba de nível <br>
+        como jogador com esta lista personalizada e fácil de usar.</p>
+    
 
-<script src="script.js"></script>
+    <div class="pesquisa">
+        <input type="text" id="gameInput" list="gameSuggestions" placeholder="Pesquisar um game">
+        <datalist id="gameSuggestions"></datalist>
+        <button class="button" onclick="adicionarGame()"><img src="plataform_logos/ICONE PESQUISAR.png" alt=""></button>
+    </div>
+
+    <div id="gameList">
+        <!-- A lista de jogos será preenchida aqui -->
+    </div>
+
+    <footer>
+        <div class="lista-f">
+            <ul>
+              <li><a href="https://www.linkedin.com/in/vinicius-mendes-620b47161/">Linkedin</a></li>
+              <li><a href="mailto:viniciusvelascooo@gmail.com">Email</a></li>
+              <li><a href="https://api.whatsapp.com/send?phone=5521986664715">Contato</a></li>
+              <li><a href="https://github.com/ViniciusMendez">Github</a></li>
+              <li> <p>Code br by Vinicius Mendes</p>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <span class="pedro">design by</span>
+            <p>@pedroximenest</p>
+          </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
 </html>
