@@ -1,5 +1,6 @@
 const API_KEY = '6dacd5d0c9984b7ab8f3d329010633a9'; // Substitua 'sua_chave_de_api' pela sua chave de API RAWG
 let gamesAdded = JSON.parse(localStorage.getItem('gamesAdded')) || []; // Array para armazenar os IDs dos jogos adicionados à lista
+let checkboxesState = JSON.parse(localStorage.getItem('checkboxesState')) || {}; // Objeto para armazenar o estado dos checkboxes
 
 document.getElementById("gameInput").addEventListener("input", function() {
     var searchTerm = this.value;
@@ -81,73 +82,19 @@ async function adicionarGame() {
             checkboxesDiv.classList.add("checkboxes");
 
             // Checkbox para "Jogando"
-            var jogandoCheckbox = document.createElement("input");
-            jogandoCheckbox.type = "checkbox";
-            jogandoCheckbox.name = "jogando";
-            jogandoCheckbox.value = "jogando";
-            jogandoCheckbox.id = "jogandoCheckbox";
-            jogandoCheckbox.classList.add("checkbox-jogando"); // Adiciona a classe para o estado "jogando"
-            jogandoCheckbox.addEventListener("change", function() {
-                if (this.checked) {
-                    zeradoCheckbox.checked = false;
-                    dropadoCheckbox.checked = false;
-                    // Aqui você pode adicionar o código para mostrar uma mensagem ou executar alguma ação quando o checkbox "Jogando" é marcado
-                    alert("Marcado como jogando");
-                }
-            });
-
-            var jogandoLabel = document.createElement("label");
-            jogandoLabel.textContent = "Jogando";
-            jogandoLabel.setAttribute("for", "jogandoCheckbox");
-
-            checkboxesDiv.appendChild(jogandoCheckbox);
-            checkboxesDiv.appendChild(jogandoLabel);
+            var jogandoCheckbox = createCheckbox("jogando", "Jogando", game.id);
+            checkboxesDiv.appendChild(jogandoCheckbox.checkbox);
+            checkboxesDiv.appendChild(jogandoCheckbox.label);
 
             // Checkbox para "Zerado"
-            var zeradoCheckbox = document.createElement("input");
-            zeradoCheckbox.type = "checkbox";
-            zeradoCheckbox.name = "zerado";
-            zeradoCheckbox.value = "zerado";
-            zeradoCheckbox.id = "zeradoCheckbox";
-            zeradoCheckbox.classList.add("checkbox-zerado");
-            zeradoCheckbox.addEventListener("change", function() {
-                if (this.checked) {
-                    jogandoCheckbox.checked = false;
-                    dropadoCheckbox.checked = false;
-                    // Aqui você pode adicionar o código para mostrar uma mensagem ou executar alguma ação quando o checkbox "Zerado" é marcado
-                    alert("Marcado como zerado");
-                }
-            });
-
-            var zeradoLabel = document.createElement("label");
-            zeradoLabel.textContent = "Zerado";
-            zeradoLabel.setAttribute("for", "zeradoCheckbox");
-
-            checkboxesDiv.appendChild(zeradoCheckbox);
-            checkboxesDiv.appendChild(zeradoLabel);
+            var zeradoCheckbox = createCheckbox("zerado", "Zerado", game.id);
+            checkboxesDiv.appendChild(zeradoCheckbox.checkbox);
+            checkboxesDiv.appendChild(zeradoCheckbox.label);
 
             // Checkbox para "Dropado"
-            var dropadoCheckbox = document.createElement("input");
-            dropadoCheckbox.type = "checkbox";
-            dropadoCheckbox.name = "dropado";
-            dropadoCheckbox.value = "dropado";
-            dropadoCheckbox.id = "dropadoCheckbox";
-            dropadoCheckbox.classList.add("checkbox-dropado");
-            dropadoCheckbox.addEventListener("change", function() {
-                if (this.checked) {
-                    jogandoCheckbox.checked = false;
-                    zeradoCheckbox.checked = false;
-                    // Aqui você pode adicionar o código para mostrar uma mensagem ou executar alguma ação quando o checkbox "Dropado" é marcado
-                    alert("Marcado como dropado");
-                }
-            });
-
-            var dropadoLabel = document.createElement("label");
-            dropadoLabel.textContent = "Dropado";
-            dropadoLabel.setAttribute("for", "dropadoCheckbox");
-
-            checkboxesDiv.appendChild(dropadoCheckbox);
-            checkboxesDiv.appendChild(dropadoLabel);
+            var dropadoCheckbox = createCheckbox("dropado", "Dropado", game.id);
+            checkboxesDiv.appendChild(dropadoCheckbox.checkbox);
+            checkboxesDiv.appendChild(dropadoCheckbox.label);
 
             titleInfoDiv.appendChild(checkboxesDiv);
 
@@ -186,6 +133,29 @@ async function adicionarGame() {
     } catch (error) {
         console.error(error);
     }
+}
+
+// Função para criar um checkbox com base no estado armazenado
+function createCheckbox(name, label, gameId) {
+    var checkbox = document.createElement("input");
+    checkbox.type = "checkbox";
+    checkbox.name = name;
+    checkbox.value = name;
+    checkbox.id = `${name}Checkbox-${gameId}`;
+    checkbox.classList.add(`checkbox-${name}`);
+    checkbox.checked = checkboxesState[gameId] ? checkboxesState[gameId][name] : false;
+    checkbox.addEventListener("change", function() {
+        checkboxesState[gameId] = checkboxesState[gameId] || {};
+        checkboxesState[gameId][name] = this.checked;
+        localStorage.setItem('checkboxesState', JSON.stringify(checkboxesState)); // Armazena o estado dos checkboxes no armazenamento local
+        // Aqui você pode adicionar o código para mostrar uma mensagem ou executar alguma ação quando o checkbox é marcado ou desmarcado
+    });
+
+    var labelElement = document.createElement("label");
+    labelElement.textContent = label;
+    labelElement.setAttribute("for", `${name}Checkbox-${gameId}`);
+
+    return { checkbox: checkbox, label: labelElement };
 }
 
 // Função para preencher a lista de jogos ao carregar a página
@@ -239,73 +209,19 @@ window.onload = function() {
             checkboxesDiv.classList.add("checkboxes");
 
             // Checkbox para "Jogando"
-            var jogandoCheckbox = document.createElement("input");
-            jogandoCheckbox.type = "checkbox";
-            jogandoCheckbox.name = "jogando";
-            jogandoCheckbox.value = "jogando";
-            jogandoCheckbox.id = "jogandoCheckbox";
-            jogandoCheckbox.classList.add("checkbox-jogando"); // Adiciona a classe para o estado "jogando"
-            jogandoCheckbox.addEventListener("change", function() {
-                if (this.checked) {
-                    zeradoCheckbox.checked = false;
-                    dropadoCheckbox.checked = false;
-                    // Aqui você pode adicionar o código para mostrar uma mensagem ou executar alguma ação quando o checkbox "Jogando" é marcado
-                    alert("Marcado como jogando");
-                }
-            });
-
-            var jogandoLabel = document.createElement("label");
-            jogandoLabel.textContent = "Jogando";
-            jogandoLabel.setAttribute("for", "jogandoCheckbox");
-
-            checkboxesDiv.appendChild(jogandoCheckbox);
-            checkboxesDiv.appendChild(jogandoLabel);
+            var jogandoCheckbox = createCheckbox("jogando", "Jogando", gameId);
+            checkboxesDiv.appendChild(jogandoCheckbox.checkbox);
+            checkboxesDiv.appendChild(jogandoCheckbox.label);
 
             // Checkbox para "Zerado"
-            var zeradoCheckbox = document.createElement("input");
-            zeradoCheckbox.type = "checkbox";
-            zeradoCheckbox.name = "zerado";
-            zeradoCheckbox.value = "zerado";
-            zeradoCheckbox.id = "zeradoCheckbox";
-            zeradoCheckbox.classList.add("checkbox-zerado");
-            zeradoCheckbox.addEventListener("change", function() {
-                if (this.checked) {
-                    jogandoCheckbox.checked = false;
-                    dropadoCheckbox.checked = false;
-                    // Aqui você pode adicionar o código para mostrar uma mensagem ou executar alguma ação quando o checkbox "Zerado" é marcado
-                    alert("Marcado como zerado");
-                }
-            });
-
-            var zeradoLabel = document.createElement("label");
-            zeradoLabel.textContent = "Zerado";
-            zeradoLabel.setAttribute("for", "zeradoCheckbox");
-
-            checkboxesDiv.appendChild(zeradoCheckbox);
-            checkboxesDiv.appendChild(zeradoLabel);
+            var zeradoCheckbox = createCheckbox("zerado", "Zerado", gameId);
+            checkboxesDiv.appendChild(zeradoCheckbox.checkbox);
+            checkboxesDiv.appendChild(zeradoCheckbox.label);
 
             // Checkbox para "Dropado"
-            var dropadoCheckbox = document.createElement("input");
-            dropadoCheckbox.type = "checkbox";
-            dropadoCheckbox.name = "dropado";
-            dropadoCheckbox.value = "dropado";
-            dropadoCheckbox.id = "dropadoCheckbox";
-            dropadoCheckbox.classList.add("checkbox-dropado");
-            dropadoCheckbox.addEventListener("change", function() {
-                if (this.checked) {
-                    jogandoCheckbox.checked = false;
-                    zeradoCheckbox.checked = false;
-                    // Aqui você pode adicionar o código para mostrar uma mensagem ou executar alguma ação quando o checkbox "Dropado" é marcado
-                    alert("Marcado como dropado");
-                }
-            });
-
-            var dropadoLabel = document.createElement("label");
-            dropadoLabel.textContent = "Dropado";
-            dropadoLabel.setAttribute("for", "dropadoCheckbox");
-
-            checkboxesDiv.appendChild(dropadoCheckbox);
-            checkboxesDiv.appendChild(dropadoLabel);
+            var dropadoCheckbox = createCheckbox("dropado", "Dropado", gameId);
+            checkboxesDiv.appendChild(dropadoCheckbox.checkbox);
+            checkboxesDiv.appendChild(dropadoCheckbox.label);
 
             titleInfoDiv.appendChild(checkboxesDiv);
 
@@ -315,10 +231,12 @@ window.onload = function() {
             removeButton.classList.add("deleteButton");
             removeButton.addEventListener("click", function() {
                 listItem.remove(); // Remove o item da lista
-                var index = gamesAdded.indexOf(game.id);
+                var index = gamesAdded.indexOf(gameId);
                 if (index !== -1) {
                     gamesAdded.splice(index, 1); // Remove o ID do jogo do array de jogos adicionados
                     localStorage.setItem('gamesAdded', JSON.stringify(gamesAdded)); // Atualiza o armazenamento local
+                    delete checkboxesState[gameId]; // Remove o estado dos checkboxes associados ao jogo removido
+                    localStorage.setItem('checkboxesState', JSON.stringify(checkboxesState)); // Atualiza o armazenamento local
                 }
             });
             titleInfoDiv.appendChild(removeButton);
